@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PusTara - Read Book</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #f6ecdd;
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+      background-color: #9b7248;
+      color: white;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo img {
+      width: 42px;
+    }
+
+    .search-container {
+      display: flex;
+      flex: 1;
+      max-width: 500px;
+      margin: 0 2rem;
+    }
+
+    .search-container input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 20px 0 0 20px;
+      border: none;
+    }
+
+    .search-container button {
+      padding: 10px;
+      border: none;
+      border-radius: 0 20px 20px 0;
+      background: white;
+      cursor: pointer;
+    }
+
+    .icon-group i {
+      margin-left: 20px;
+      font-size: 1.3rem;
+    }
+
+    .main-nav {
+      background-color: #f0e9dc;
+      text-align: center;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      padding: 0.5rem 0;
+    }
+
+    .main-nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .book-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .book-content img {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+
+    .navigation-buttons {
+      margin-top: 1.5rem;
+    }
+
+    .navigation-buttons button {
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      background-color: #9b7248;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      background-color: #9b7248;
+    }
+
+    footer a {
+      color: rgb(220, 206, 128);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+        <span>PusTara</span>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="icon-group">
+        <i class="fas fa-bookmark"></i>
+        <i class="fas fa-clock-rotate-left"></i>
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="recom.html">RECOMMENDATION</a>
+      <a href="#">UPCOMING</a>
+      <a href="genre.html">GENRES</a>
+      <a href="#about">ABOUT US</a>
+    </nav>
+  </header>
+
+  <main class="book-content">
+    <img src="logo.png" alt="Book Page">
+    <div class="navigation-buttons">
+      <button onclick="window.location.href='read.html'">Back</button>
+      <button onclick="window.location.href='book-page2.html'">Next</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 PusTara — <a href="team.html">Our Team.</a>
+  </footer>
+</body>
+
+</html>

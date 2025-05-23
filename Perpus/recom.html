@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PusTara - Recommendation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f6ecdd;
+      color: #333;
+    }
+
+    header {
+      background-color: #9b7248;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: #9b7248;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo img {
+      width: 42px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .logo span {
+      font-size: 1.7rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .search-container {
+      display: flex;
+      flex: 1;
+      max-width: 500px;
+      margin: 0 2rem;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 20px 0 0 20px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .search-container button {
+      padding: 10px 14px;
+      border: none;
+      background-color: #fff;
+      border-radius: 0 20px 20px 0;
+      cursor: pointer;
+      color: #333;
+      transition: background-color 0.3s;
+    }
+
+    .search-container button:hover {
+      background-color: #e1d0ba;
+    }
+
+    .icon-group i {
+      font-size: 1.3rem;
+      margin-left: 20px;
+      cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .icon-group i:hover {
+      transform: scale(1.15);
+      color: #f1e3c2;
+    }
+
+    .main-nav {
+      background-color: #f0e9dc;
+      display: flex;
+      justify-content: center;
+      padding: 0.7rem 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .main-nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: black;
+      font-size: 1rem;
+      font-weight: 600;
+      font-style: italic;
+      position: relative;
+    }
+
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #9b7248;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.3s;
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .section {
+      padding: 2rem;
+    }
+
+    .section h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+
+    .book-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .book-grid p {
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 0.3rem;
+    }
+
+    footer {
+      background-color: #9b7248;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    footer a {
+      color: rgb(220, 206, 128);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="logo">
+        <span>         | </span>
+        <img src="logo.png" alt="Logo">
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="icon-group">
+        <i class="fas fa-bookmark"></i>
+        <i class="fas fa-clock-rotate-left"></i>
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="recom.html">RECOMMENDATION</a>
+      <a href="index.html">UPCOMING</a>
+      <a href="genre.html">GENRES</a>
+      <a href="index.html">ABOUT US</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>RECOMMENDATIONS BOOK</h2>
+    <div class="book-grid">
+      <div><img src="img/book1.jpg" alt=""><p>Berani Tidak Disukai</p></div>
+      <div><img src="img/book2.jpg" alt=""><p>You Do You</p></div>
+      <div><img src="img/book3.jpg" alt=""><p>Rich Dad Poor Dad</p></div>
+      <div><img src="img/book4.jpg" alt=""><p>Mindset</p></div>
+      <div><img src="img/book5.jpg" alt=""><p>5 Levels of Leadership</p></div>
+      <div><img src="img/book6.jpg" alt=""><p>Laut Bercerita</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>DAILY SPOT</h2>
+    <div class="book-grid">
+      <div><img src="img/daily1.jpg" alt=""><p>Bike to Work</p></div>
+      <div><img src="img/daily2.jpg" alt=""><p>The Warrior Game</p></div>
+      <div><img src="img/daily3.jpg" alt=""><p>Cut to the Bone</p></div>
+      <div><img src="img/daily4.jpg" alt=""><p>Buya Hamka</p></div>
+      <div><img src="img/daily5.jpg" alt=""><p>Perahu Kertas</p></div>
+      <div><img src="img/daily6.jpg" alt=""><p>Elektro</p></div>
+      <div><img src="img/daily7.jpg" alt=""><p>Kamus Korea</p></div>
+      <div><img src="img/daily8.jpg" alt=""><p>Sejarah Indonesia</p></div>
+      <div><img src="img/daily9.jpg" alt=""><p>A Game Of Proof</p></div>
+      <div><img src="img/daily10.jpg" alt=""><p>Sound of The Future</p></div>
+      <div><img src="img/daily11.jpg" alt=""><p>Fisika</p></div>
+      <div><img src="img/daily12.jpg" alt=""><p>Kiamat Sudah Dekat</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>WEEKLY SELECTION</h2>
+    <div class="book-grid">
+      <div><img src="img/weekly1.jpg" alt=""><p>Into the Wild</p></div>
+      <div><img src="img/weekly2.jpg" alt=""><p>Percakapan Politik</p></div>
+      <div><img src="img/weekly3.jpg" alt=""><p>Dialog Moderasi</p></div>
+      <div><img src="img/weekly4.jpg" alt=""><p>Manusia Indonesia</p></div>
+      <div><img src="img/weekly5.jpg" alt=""><p>Sejarah Politik</p></div>
+      <div><img src="img/weekly6.jpg" alt=""><p>Romansa Mahasiswa</p></div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 PusTara — <a href="team.html">Our Team.</a>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PusTara - My List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f6ecdd;
+      color: #333;
+    }
+
+    header {
+      background-color: #9b7248;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo img {
+      width: 42px;
+    }
+
+    .logo span {
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+
+    .search-container {
+      display: flex;
+      flex: 1;
+      max-width: 500px;
+      margin: 0 2rem;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .search-container button {
+      border: none;
+      padding: 10px;
+      border-radius: 0 20px 20px 0;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .icon-group i {
+      margin-left: 20px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .icon-group i.active {
+      color: gold;
+    }
+
+    .main-nav {
+      background-color: #f0e9dc;
+      display: flex;
+      justify-content: center;
+      padding: 0.7rem 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .main-nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .section {
+      padding: 2rem;
+    }
+
+    .section h2 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .book-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .book-grid div {
+      width: 120px;
+      text-align: center;
+    }
+
+    .book-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .book-grid p {
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+    }
+
+    .create-new {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .create-new i {
+      margin-right: 8px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: #9b7248;
+      color: white;
+      text-align: center;
+    }
+    footer a {
+      color: rgb(220, 206, 128);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+        <span>PusTara</span>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="icon-group">
+        <i class="fas fa-bookmark" href="bookmark.html" id="bookmark-icon"></i>
+        <i class="fas fa-clock-rotate-left"></i>
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="recom.html">RECOMMENDATION</a>
+      <a href="#">UPCOMING</a>
+      <a href="genre.html">GENRES</a>
+      <a href="#about">ABOUT US</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>MYLIST</h2>
+    <div class="book-grid">
+      <div><img src="img/book1.jpg" alt=""><p>Into The Wild</p></div>
+      <div><img src="img/book2.jpg" alt=""><p>Percakapan Politik</p></div>
+      <div><img src="img/book3.jpg" alt=""><p>Bintang</p></div>
+      <div><img src="img/book4.jpg" alt=""><p>FiRsTaR Indonesia</p></div>
+      <div><img src="img/book5.jpg" alt=""><p>Dilan 1990</p></div>
+      <div><img src="img/book6.jpg" alt=""><p>Romansa Kota Bandung</p></div>
+    </div>
+    <div class="create-new">
+      <i class="fas fa-plus-circle"></i>
+      <span>CREATE NEW LIST</span>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 PusTara — <a href="team.html">Our Team.</a>
+  </footer>
+
+  <script>
+    const bookmarkIcon = document.getElementById('bookmark-icon');
+    bookmarkIcon.addEventListener('click', () => {
+      bookmarkIcon.classList.toggle('active');
+      if (bookmarkIcon.classList.contains('active')) {
+        alert('Added to bookmarks!');
+      } else {
+        alert('Removed from bookmarks!');
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PusTara - History</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f6ecdd;
+      color: #333;
+    }
+
+    header {
+      background-color: #9b7248;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo img {
+      width: 42px;
+    }
+
+    .logo span {
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+
+    .search-container {
+      display: flex;
+      flex: 1;
+      max-width: 500px;
+      margin: 0 2rem;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .search-container button {
+      border: none;
+      padding: 10px;
+      border-radius: 0 20px 20px 0;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .icon-group i {
+      margin-left: 20px;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    nav.main-nav {
+      background-color: #f0e9dc;
+      display: flex;
+      justify-content: center;
+      padding: 0.7rem 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    nav.main-nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .history-container {
+      padding: 2rem;
+    }
+
+    .history-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .history-item img {
+      width: 100px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .history-details {
+      flex: 1;
+      margin-left: 1rem;
+    }
+
+    .book-title {
+      font-weight: bold;
+    }
+
+    .book-author {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .book-status {
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+
+    .ready {
+      color: green;
+    }
+
+    .not-ready {
+      color: red;
+    }
+
+    .history-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .continue-btn {
+      margin-top: 1rem;
+      padding: 0.4rem 1rem;
+      background-color: #ccc;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: #9b7248;
+      color: white;
+      text-align: center;
+    }
+
+    footer a {
+      color: rgb(220, 206, 128);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+        <span>PusTara</span>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="icon-group">
+        <i class="fas fa-bookmark"></i>
+        <i class="fas fa-clock-rotate-left"></i>
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="recom.html">RECOMMENDATION</a>
+      <a href="#">UPCOMING</a>
+      <a href="genre.html">GENRES</a>
+      <a href="#about">ABOUT US</a>
+    </nav>
+  </header>
+
+  <div class="history-container">
+    <div class="history-item">
+      <img src="img/bintang.jpg" alt="Bintang">
+      <div class="history-details">
+        <div class="book-title">Bintang</div>
+        <div class="book-author">Nurul Anwar</div>
+        <div class="book-status ready">Status: READY</div>
+      </div>
+      <div class="history-actions">
+        <div>last open : 12/04/2025</div>
+        <button class="continue-btn">CONTINUE</button>
+      </div>
+    </div>
+
+    <div class="history-item">
+      <img src="img/kkn.jpg" alt="KKN Di Desa Penari">
+      <div class="history-details">
+        <div class="book-title">KKN Di Desa Penari</div>
+        <div class="book-author">Simpleman</div>
+        <div class="book-status not-ready">Status: NOT-READY</div>
+      </div>
+      <div class="history-actions">
+        <div>last open : 20/03/2025</div>
+        <button class="continue-btn">CONTINUE</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 PusTara — <a href="team.html">Our Team.</a>
+  </footer>
+</body>
+
+</html>

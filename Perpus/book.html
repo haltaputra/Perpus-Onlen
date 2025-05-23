@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PusTara - Book Display</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f6ecdd;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #9b7248;
+      color: white;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo img {
+      width: 42px;
+    }
+
+    .search-container {
+      display: flex;
+      flex: 1;
+      max-width: 500px;
+      margin: 0 2rem;
+    }
+
+    .search-container input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 20px 0 0 20px;
+      border: none;
+    }
+
+    .search-container button {
+      padding: 10px;
+      border: none;
+      border-radius: 0 20px 20px 0;
+      background: white;
+      cursor: pointer;
+    }
+
+    .icon-group i {
+      margin-left: 20px;
+      font-size: 1.3rem;
+    }
+
+    .main-nav {
+      background-color: #f0e9dc;
+      text-align: center;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      padding: 0.5rem 0;
+    }
+
+    .main-nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .book-display {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .book-cover {
+      text-align: center;
+      width: 150px;
+    }
+
+    .book-cover img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .read-button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #ccc;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .rate-stars {
+      margin-top: 0.8rem;
+      color: #ccc;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .rate-stars .active {
+      color: gold;
+    }
+
+    .book-info {
+      flex: 1;
+      position: relative;
+    }
+
+    .book-info h2 {
+      margin: 0;
+    }
+
+    .rating-stars {
+      color: orange;
+      margin: 0.4rem 0;
+    }
+
+    .rating-number {
+      margin-left: 0.5rem;
+    }
+
+    .bookmark-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1.2rem;
+      color: black;
+      cursor: pointer;
+    }
+
+    .similar-section {
+      padding: 2rem;
+    }
+
+    .similar-section h3 {
+      margin-bottom: 1rem;
+    }
+
+    .similar-grid {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+    }
+
+    .similar-grid div {
+      width: 120px;
+      text-align: center;
+    }
+
+    .similar-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    footer .left {
+      color: white;
+    }
+
+    footer .right {
+      color: white;
+    }
+    footer a {
+      color: rgb(220, 206, 128);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+        <span>PusTara</span>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="icon-group">
+        <i class="fas fa-bookmark"></i>
+        <i class="fas fa-clock-rotate-left"></i>
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="recom.html">RECOMMENDATION</a>
+      <a href="#">UPCOMING</a>
+      <a href="genre.html">GENRES</a>
+      <a href="#about">ABOUT US</a>
+    </nav>
+  </header>
+
+  <section class="book-display">
+    <div class="book-cover">
+      <img src="logo.png" alt="Bintang">
+      <button class="read-button">Baca</button>
+      <div class="rate-stars" id="rating">
+        <span data-value="1">☆</span>
+        <span data-value="2">☆</span>
+        <span data-value="3">☆</span>
+        <span data-value="4">☆</span>
+        <span data-value="5">☆</span><br>
+        <small>Rate this book</small>
+      </div>
+    </div>
+    <div class="book-info">
+      <i class="fas fa-bookmark bookmark-btn"></i>
+      <h2>Bintang</h2>
+      <p>Nurul Anwar</p>
+      <div class="rating-stars">
+        ★ ★ ★ ★ ☆ <span class="rating-number">3.78</span>
+      </div>
+      <p>
+        Buku "Bintang" karya Nurul Anwar mengisahkan Aya dan Ilham yang menjalani kehidupan penuh liku di kota sederhana Kuantan.
+        Cerita ini mengeksplorasi tema kehilangan, kesetiaan, persahabatan, dan keluarga.
+        Informasi lebih lanjut dan opsi pembelian dapat Anda temukan di situs Nurul Anwar Bookstore.
+      </p>
+    </div>
+  </section>
+
+  <section class="similar-section">
+    <h3>Similar Book</h3>
+    <div class="similar-grid">
+      <div><img src="img/similar1.jpg" alt=""><p>Pesta Karang Merah</p></div>
+      <div><img src="img/similar2.jpg" alt=""><p>Kisah Muslim Gugur</p></div>
+      <div><img src="img/similar3.jpg" alt=""><p>Funiculi Funicula</p></div>
+      <div><img src="img/similar4.jpg" alt=""><p>Why Secretary Kim 1</p></div>
+      <div><img src="img/similar5.jpg" alt=""><p>Why Secretary Kim 2</p></div>
+      <div><img src="img/similar6.jpg" alt=""><p>Five Feet Apart</p></div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 PusTara — <a href="team.html">Our Team.</a>
+  </footer>
+
+  <script>
+    const stars = document.querySelectorAll('#rating span');
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        const value = parseInt(star.getAttribute('data-value'));
+        stars.forEach(s => {
+          const v = parseInt(s.getAttribute('data-value'));
+          s.classList.toggle('active', v <= value);
+        });
+        alert(`You rated this book ${value} stars.`);
+      });
+    });
+  </script>
+</body>
+
+</html>

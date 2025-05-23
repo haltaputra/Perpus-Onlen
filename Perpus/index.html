@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PusTara - Highlights</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f6ecdd;
+      color: #333;
+    }
+
+    header {
+      background-color: #9b7248;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: #9b7248;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo img {
+      width: 42px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .logo span {
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+
+    .search-container {
+      display: flex;
+      flex: 1;
+      max-width: 500px;
+      margin: 0 2rem;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 20px 0 0 20px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .search-container button {
+      padding: 10px 14px;
+      border: none;
+      background-color: #fff;
+      border-radius: 0 20px 20px 0;
+      cursor: pointer;
+      color: #333;
+      transition: background-color 0.3s;
+    }
+
+    .search-container button:hover {
+      background-color: #e1d0ba;
+    }
+
+    .icon-group i {
+      font-size: 1.3rem;
+      margin-left: 20px;
+      cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .icon-group i:hover {
+      transform: scale(1.15);
+      color: #f1e3c2;
+    }
+
+    .icon-group a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .icon-group a:visited {
+      color: white;
+    }
+
+
+    .main-nav {
+      background-color: #f0e9dc;
+      display: flex;
+      justify-content: center;
+      padding: 0.7rem 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .main-nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: black;
+      font-size: 1rem;
+      font-weight: 600;
+      font-style: italic;
+      position: relative;
+    }
+
+        .main-nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #9b7248;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.3s;
+     }
+
+     .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .book-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .book-grid div {
+      text-align: center;
+      max-width: 140px;
+    }
+
+    .book-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-grid p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .about-text {
+      max-width: 700px;
+      margin: 2rem auto;
+      font-size: 1rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #9b7248;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    
+    footer a {
+      color: rgb(220, 206, 128);
+      text-decoration: none;
+    }
+
+    html {
+    scroll-behavior: smooth;
+  }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="logo">
+        <span>         | </span>
+        <img src="logo.png" alt="Logo">
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="icon-group">
+      <a href="bookmark.html"><i class="fas fa-bookmark"></i></a>
+      <i class="fas fa-clock-rotate-left"></i>
+      <i class="fas fa-user"></i>
+</div>
+
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="recom.html">RECOMMENDATION</a>
+      <a href="#upcoming">UPCOMING</a>
+      <a href="genre.html">GENRES</a>
+      <a href="#about">ABOUT US</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>BEST BOOK</h2>
+    <div class="book-grid">
+      <div><img src="img/best1.jpg" alt=""><p>Can't Help Falling In Love<br>Swati Hegde</p></div>
+      <div><img src="img/best2.jpg" alt=""><p>Great Big Beautiful Life<br>Emily Henry</p></div>
+      <div><img src="img/best3.jpg" alt=""><p>Say You'll Remember Me<br>Abby Jimenez</p></div>
+    </div>
+  </section>
+
+  <section id="upcomings" class="section">
+    <h2>UPCOMING</h2>
+    <div class="book-grid">
+      <div><img src="img/upcoming1.jpg" alt=""><p>Beautiful Ugly<br>Alice Feeney</p></div>
+      <div><img src="img/upcoming2.jpg" alt=""><p>Onyx Storm<br>Swati Hegde</p></div>
+      <div><img src="img/upcoming3.jpg" alt=""><p>Sunrise On The Reaping<br>Suzanne Collins</p></div>
+      <div><img src="img/upcoming4.jpg" alt=""><p>Happy Land<br>Swati Hegde</p></div>
+      <div><img src="img/upcoming5.jpg" alt=""><p>Sounds Like Love<br>Deborah Kim</p></div>
+      <div><img src="img/upcoming6.jpg" alt=""><p>We Do Not Part<br>Han Kang</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>GENRES</h2>
+    <div class="book-grid">
+      <div><img src="img/genre_romance.jpg" alt=""><p>Romance</p></div>
+      <div><img src="img/genre_action.jpg" alt=""><p>Action</p></div>
+      <div><img src="img/genre_mystery.jpg" alt=""><p>Mystery</p></div>
+      <div><img src="img/genre_biographies.jpg" alt=""><p>Biographies</p></div>
+      <div><img src="img/genre_story.jpg" alt=""><p>Story</p></div>
+      <div><img src="img/genre_novel.jpg" alt=""><p>Novel</p></div>
+      <div><img src="img/genre_dictionary.jpg" alt=""><p>Dictionary</p></div>
+      <div><img src="img/genre_history.jpg" alt=""><p>History</p></div>
+      <div><img src="img/genre_horror.jpg" alt=""><p>Horror</p></div>
+      <div><img src="img/genre_fiction.jpg" alt=""><p>Fiction</p></div>
+      <div><img src="img/genre_nonfiction.jpg" alt=""><p>Non-Fiction</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>ABOUT US</h2>
+    <div class="about-text">
+      <p>
+        Selamat Datang di PusTara, Platform ini menghadirkan akses mudah dan cepat ke berbagai koleksi buku hingga referensi akademik.
+        Kami berkomitmen untuk menyediakan sumber bacaan yang berkualitas bagi pelajar hingga masyarakat umum.
+      </p>
+      <br>
+      <p>
+        Dengan teknologi modern, perpustakaan digital kami memungkinkan pengguna untuk mencari, membaca, materi kapan saja dan di mana saja.
+        Kami percaya bahwa akses ilmu pengetahuan harus terbuka untuk semua orang, sehingga kami terus berinovasi untuk meningkatkan pengalaman membaca.
+      </p>
+      <br>
+      <p>
+        Mari menjelajahi dunia literasi bersama kami dan temukan wawasan baru di PusTara.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 PusTara — <a href="team.html">Our Team.</a>
+  </footer>
+</body>
+
+</html>
